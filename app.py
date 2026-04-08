@@ -307,7 +307,7 @@ with st.expander("Questions",  expanded= True):
         grouped = df_cleaned.groupby(['Device Name','Sentiment']).size().unstack().fillna(0)
 
         # Plot the results as a bar chart
-        fig1,ax1 = plt.subplots(figsize=(8, 5))
+        fig1,ax1 = plt.subplots(figsize=(15, 4))
         grouped.plot(kind='bar', ax=ax1)
         # Add chart title and labels
         plt.title("Sentiment per Device")
@@ -411,19 +411,7 @@ with st.expander("Questions",  expanded= True):
                     
 
 
-        
-
-        # ==========================================================
-        #  (PREVIOUS CODE): Data Logic & Processing
-        # Goal: Calculate the "Frequency" of aspect pairs (Counting)
-        # Result: A "Counter" object containing numbers (Raw Data)
-        # ==========================================================
-
-        # ==========================================================
-        #  (THIS CODE): Data Transformation & Visualization
-        # Goal: Convert "Raw Numbers" into a "Visual Heatmap"
-        # Result: A clear graphical representation of correlations
-        # ==========================================================
+    
 
         neg_reviews_exploded = df_cleaned[df_cleaned['Sentiment'] == 'Negative'].copy()
 
@@ -470,7 +458,7 @@ with st.expander("Questions",  expanded= True):
 
 
     with st.expander("Social-Emotional Bondsoc"):
-        st.write(":Is there an emotional bond betwwen the device and the userr")
+        st.write("Is there an emotional bond betwwen the device and the user")
 
         #The QUESTION:Is there an emotional bond betwwen the device and the user
 
@@ -490,7 +478,7 @@ with st.expander("Questions",  expanded= True):
         # --- Visualizing the WordCloud ---
 
         # Create the WordCloud with a white background and specific size
-        wc = WordCloud(width=800, height=400, background_color='white').generate(text)
+        wc = WordCloud(width=700, height=300, background_color='white').generate(text)
 
         # Plot the WordCloud image
         fig, ax = plt.subplots(figsize=(12, 6))
@@ -522,12 +510,18 @@ with st.expander("Questions",  expanded= True):
         df_cleaned_pivot = df_cleaned_counts.pivot(index='Source', columns='Sentiment', values='count').fillna(0)
 
         #3. Create a 'Stacked Bar Chart' to compare sentiment distributions
-        fig1, ax1 = plt.subplots()
+        fig1, ax1 = plt.subplots(figsize=(15,6))
         df_cleaned_pivot.plot(kind='bar', stacked=True, ax=ax1)
         ax1.set_title("Sentiment Vs Source")
 
         st.pyplot(fig1)
         st.write("**INSIGHT : Best Buy is the source that has the most number of reviews.**")
+
+
+
+
+
+
 
 
     # --- Section 2: Relationship Between Top Aspects and Device Names  ---
@@ -555,8 +549,8 @@ with st.expander("Questions",  expanded= True):
         plt.tight_layout()
 
         st.pyplot(fig2)
-        st.write("**INSIGHT : Different devices have different dominant problems.**")
-        st.write("**INSIGHT : Connectivity is a common issue across all devices.**")
+        st.write("**INSIGHT 1 : Different devices have different dominant problems.**")
+        st.write("**INSIGHT 2 : Connectivity is a common issue across all devices.**")
 
 
 
@@ -610,7 +604,7 @@ with st.expander("Questions",  expanded= True):
 
 with st.expander('Most discussed aspects in users reviews'):
 
-    fig, ax = plt.subplots()
+    fig, ax = plt.subplots(figsize=(15,6))
     df_cleaned['Aspects'].value_counts().head(10).plot(kind='barh', ax=ax)
     #THE TITLE
     plt.title("Most Discussed Aspects")
@@ -811,7 +805,6 @@ with col2:
 with col3:
     st.markdown("[⬛ Yossra Mohamed](https://www.linkedin.com/in/yossra-mohamed-6b0a133b2)")
     st.markdown("[⬛ Mariam Amr](https://www.linkedin.com/in/mariam-amr-abdelsalam-9772443ba)")
-
 
 
 
