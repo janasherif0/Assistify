@@ -107,7 +107,7 @@ df_cleaned.drop_duplicates(inplace=True)
 
 
 
-df_cleaned = df_cleaned.reset_index(drop=true)
+df_cleaned = df_cleaned.reset_index(drop=True)
 
 
 
