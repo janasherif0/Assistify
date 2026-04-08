@@ -428,7 +428,7 @@ with st.expander("Questions",  expanded= True):
         neg_reviews_exploded = df_cleaned[df_cleaned['Sentiment'] == 'Negative'].copy()
 
         # Group by the original index to collect all aspects from the same review into a list
-        grouped_aspects_for_cooccurrence = neg_reviews_exploded.groupby(neg_reviews_exploded.index)['Aspects'].apply(lambda x: [item for item in x if pd.notna(item)])
+        grouped_aspects_for_cooccurrence = neg_reviews_exploded.groupby('Description')['Aspects'].apply(lambda x: [item for item in x if pd.notna(item)])
 
         # Calculate co-occurrence counts
         counts = Counter()
