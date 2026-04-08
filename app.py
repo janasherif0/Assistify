@@ -452,7 +452,7 @@ with st.expander("Questions",  expanded= True):
             matrix.loc[a, b] = c
             matrix.loc[b, a] = c # Ensure symmetry
 
-        fig, ax = plt.subplots(figsize=(12, 10))
+        fig, ax = plt.subplots(figsize=(15, 5))
         #Plot the Heatmap for Visual Insights
         # Using Seaborn to highlight the strongest correlations between aspects
         sns.heatmap(matrix, annot=True, cmap='Reds', fmt='d', ax=ax)
