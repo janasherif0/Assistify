@@ -307,7 +307,7 @@ with st.expander("Questions",  expanded= True):
         grouped = df_cleaned.groupby(['Device Name','Sentiment']).size().unstack().fillna(0)
 
         # Plot the results as a bar chart
-        fig1,ax1 = plt.subplots(figsize=(15, 1))
+        fig1,ax1 = plt.subplots(figsize=(15, 4))
         grouped.plot(kind='bar', ax=ax1)
         # Add chart title and labels
         plt.title("Sentiment per Device")
