@@ -107,25 +107,10 @@ df_cleaned.drop_duplicates(inplace=True)
 
 
 
+df_cleaned = df_cleaned.reset_index(drop=true)
 
 
 
-
-
-
-
-# =============================================================================================================================================================
-# Data Aggregation Section 
-# =============================================================================================================================================================
-
-
-
-# Group data to find frequency of "Clock" devices with "Neutral" sentiment
-df_cleaned[(df_cleaned['Aspects'] == 'Clock') & (df_cleaned['Sentiment'] == 'Neutral')]['Device Name'].value_counts().reset_index()
-# Group data to find frequency of "Clock" devices with "Positive" sentiment
-df_cleaned[(df_cleaned['Aspects'] == 'Clock') & (df_cleaned['Sentiment'] == 'Positive')]['Device Name'].value_counts().reset_index()
-# Group data to find frequency of "Clock" devices with "Negative" sentiment
-df_cleaned[(df_cleaned['Aspects'] == 'Clock') & (df_cleaned['Sentiment'] == 'Negative')]['Device Name'].value_counts().reset_index()
 
 
 # =============================================================================================================================================================
