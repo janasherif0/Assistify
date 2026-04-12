@@ -301,7 +301,7 @@ st.markdown("""
 
 with st.expander("Questions",  expanded= True):
   
-    with st.expander("what is the sentiment per device"):
+    with st.expander("What is the sentiment per device"):
 
         # Group data by Device Name and Sentiment, then count reviews
         grouped = df_cleaned.groupby(['Device Name','Sentiment']).size().unstack().fillna(0)
