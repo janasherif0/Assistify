@@ -632,7 +632,7 @@ with st.expander("Clock"):
     df_aspect=df_cleaned[df_cleaned['Aspects']=='Clock']
     #3. Draw the line
     if not df_aspect.empty:
-     fig, ax = plt.subplots(figsize=(10, 6))
+     fig, ax = plt.subplots(figsize=(8, 4))
         
     sns.lineplot(data=df_aspect, x='Device Name', y='Polarity', marker='o', ax=ax)
     plt.xticks(rotation=45)#Help if device names are long
