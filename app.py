@@ -771,17 +771,13 @@ st.table(table_df)
 
 
 st.title("**Recommendations :**")
-st.write("Developers should give priority to focusing on improving connectivity of devices.")
-st.write("Developers should pay attention to improving & solving the problems that users are facing.")
-st.write("It is important to enhance product quality and reliability to reduce negative customer feedback.")
-st.write(" The company should focus on improving devices with high negative reviews, especially those with frequent complaints about performance and connectivity.")
-st.write("The company should maintain and promote devices with high positive sentiment, as they reflect strong customer satisfaction.")
-st.write("Developers should pay close attention to common negative aspects and work on fixing user-reported issues.")
-st.write("improving weak devices while maintaining strong-performing ones will help increase overall customer satisfaction.")
-st.write("Continue enhancing the most frequently mentioned positive aspects.")
-st.write("Apply device-specific improvements instead of one solution for all products.")
-st.write("Companies should focus on using AI to improve ideas and reach people better.")
-
+st.write("Improve device connectivity and performance since they cause most user complaints.")
+st.write("Fix common problems reported by users to improve their experience.")
+st.write("Focus on devices with many negative reviews and work on improving them.")
+st.write("Maintain and support devices with positive feedback to keep customer satisfaction high.")
+st.write("Improve product quality and reliability to reduce negative reviews.")
+st.write("Make specific improvements for each device instead of using one solution for all.")
+st.write("Use AI tools to better understand customer feedback and improve products.")
 
 
 
