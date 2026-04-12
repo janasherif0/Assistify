@@ -651,7 +651,7 @@ with st.expander("Price"):
     df_aspect=df_cleaned[df_cleaned['Aspects']=='Price']
     #3. Draw the line
     if not df_aspect.empty:
-     fig10, ax10 = plt.subplots(figsize=(8, 2)
+     fig10, ax10 = plt.subplots(figsize=(8, 2))
         
     sns.lineplot(data=df_aspect, x='Device Name', y='Polarity', marker='o', ax=ax10)
     plt.xticks(rotation=45)#Help if device names are long
