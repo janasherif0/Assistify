@@ -772,7 +772,7 @@ st.table(table_df)
 
 st.title("**Recommendations :**")
 st.write("Developers should give priority to focusing on improving connectivity of devices.")
-st.write("improving weak devices while maintaining strong-performing ones will help increase overall customer satisfaction.")
+st.write("Improving weak devices while maintaining strong-performing ones will help increase overall customer satisfaction.")
 st.write("Apply device-specific improvements instead of one solution for all products.")
 st.write("Improve product stability and consistency to build user trust and satisfaction.")
 st.write("Simplify setup steps and improve in-product guidance with clear error messages and self-serve troubleshooting.")
