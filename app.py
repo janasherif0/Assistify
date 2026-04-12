@@ -712,7 +712,7 @@ with st.expander("Configuration"):
     df_aspect=df_cleaned[df_cleaned['Aspects']=='Configuration']
     #3. Draw the line
     if not df_aspect.empty:
-     fig40, ax40 = plt.subplots(figsize=(8, 2))
+     fig40, ax40 = plt.subplots(figsize=(8, 1.5))
         
     sns.lineplot(data=df_aspect, x='Device Name', y='Polarity', marker='o', ax=ax40)
     plt.xticks(rotation=45)#Help if device names are long
