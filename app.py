@@ -632,7 +632,7 @@ with st.expander("Clock"):
     df_aspect=df_cleaned[df_cleaned['Aspects']=='Clock']
     #3. Draw the line
     if not df_aspect.empty:
-     fig, ax = plt.subplots(figsize=(8, 2))
+     fig, ax = plt.subplots(figsize=(8, 1.5))
         
     sns.lineplot(data=df_aspect, x='Device Name', y='Polarity', marker='o', ax=ax)
     plt.xticks(rotation=45)#Help if device names are long
@@ -651,7 +651,7 @@ with st.expander("Price"):
     df_aspect=df_cleaned[df_cleaned['Aspects']=='Price']
     #3. Draw the line
     if not df_aspect.empty:
-     fig10, ax10 = plt.subplots(figsize=(8, 2))
+     fig10, ax10 = plt.subplots(figsize=(8, 1.5))
         
     sns.lineplot(data=df_aspect, x='Device Name', y='Polarity', marker='o', ax=ax10)
     plt.xticks(rotation=45)#Help if device names are long
@@ -671,7 +671,7 @@ with st.expander("Connectivity"):
     df_aspect=df_cleaned[df_cleaned['Aspects']=='Connectivity']
     #3. Draw the line
     if not df_aspect.empty:
-     fig20, ax20 = plt.subplots(figsize=(8, 2))
+     fig20, ax20 = plt.subplots(figsize=(8, 1.5))
         
     sns.lineplot(data=df_aspect, x='Device Name', y='Polarity', marker='o', ax=ax20)
     plt.xticks(rotation=45)#Help if device names are long
@@ -692,7 +692,7 @@ with st.expander("Smart assistant"):
     df_aspect=df_cleaned[df_cleaned['Aspects']=='Smart assistant']
     #3. Draw the line
     if not df_aspect.empty:
-     fig30, ax30 = plt.subplots(figsize=(8, 2))
+     fig30, ax30 = plt.subplots(figsize=(8, 1.5))
         
     sns.lineplot(data=df_aspect, x='Device Name', y='Polarity', marker='o', ax=ax30)
     plt.xticks(rotation=45)#Help if device names are long
