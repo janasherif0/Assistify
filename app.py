@@ -457,8 +457,8 @@ with st.expander("Questions",  expanded= True):
 
 
 
-    with st.expander("Social-Emotional Bondsoc"):
-        st.write("Is there an emotional bond betwwen the device and the user")
+    with st.expander("How does the users satisfied with the product?"):
+        st.write("Social-Emotional Bondsoc")
 
         #The QUESTION:Is there an emotional bond betwwen the device and the user
 
@@ -499,8 +499,8 @@ with st.expander("Questions",  expanded= True):
     # --- Section 1: Sentiment Analysis by Source ---
 
 
-    with st.expander("How does Sentiment vary across different Sources"):
-        st.subheader("Does users reviews among differnt sources differ from each other ?")
+    with st.expander("What is the most popular source used by the users"):
+        
 
         # 1. Group data by 'Source' and 'Sentiment' to count occurrences
         df_cleaned_counts = df_cleaned.groupby(['Source', 'Sentiment']).size().reset_index(name='count')
@@ -525,7 +525,7 @@ with st.expander("Questions",  expanded= True):
 
 
     # --- Section 2: Relationship Between Top Aspects and Device Names  ---
-    with st.expander("what are the top 5 most frequent aspects in each device"):
+    with st.expander("What are the top 5 most frequent aspects in each device"):
         # 4. Identify the Top 5 most frequent aspects in the dataset
         top_aspects = df_cleaned['Aspects'].value_counts().head(5).index
 
@@ -799,7 +799,6 @@ with col2:
 with col3:
     st.markdown("[⬛ Yossra Mohamed](https://www.linkedin.com/in/yossra-mohamed-6b0a133b2)")
     st.markdown("[⬛ Mariam Amr](https://www.linkedin.com/in/mariam-amr-abdelsalam-9772443ba)")
-
 
 
 
