@@ -375,7 +375,6 @@ with st.expander("Questions",  expanded= True):
 
         # Add descriptive title and axis labels for professional presentation
         plt.title("Most Frequent Positive Aspects")
-        plt.title("Most Frequent Positive Aspects")
         plt.xlabel("positive_df_cleaned")
         plt.ylabel("Count")
         plt.xticks(rotation=45)
